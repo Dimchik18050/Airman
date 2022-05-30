@@ -4,10 +4,13 @@ using UnityEngine;
 
 // Контролер та поведінка гравця
 
-public class PlayerScripts : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     // Швидкість руху 
     public Vector2 speed = new Vector2(50, 50);
+
+    // Напрямок руху
+    private Vector2 movement;
 
     // Оголошення rigid2D
     Rigidbody2D rigid2D;
@@ -17,10 +20,6 @@ public class PlayerScripts : MonoBehaviour
         // Ініціалізування rigid2D
         rigid2D = GetComponent<Rigidbody2D>();
     }
-
-
-    // Напрямок руху
-    private Vector2 movement;
 
     // Update is called once per frame
     void Update()
